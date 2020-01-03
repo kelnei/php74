@@ -155,7 +155,7 @@ use of PHP coding is probably as a replacement for CGI scripts.
 %package -n mod_%{name}
 Summary: PHP module for the Apache HTTP Server
 # ensure we build with stock httpd, not httpd24u
-BuildRequires: httpd-devel < 2.4.10
+BuildRequires: httpd-devel < 2.4.41
 Requires: httpd-mmn = %{_httpd_mmn}
 Requires: php-common%{?_isa} = %{version}-%{release}
 %if %{with_zts}
@@ -1690,6 +1690,7 @@ exit 0
 %changelog
 * Fri Jan 03 2020 Matt Linscott <matt.linscott@gmail.com> - 7.4.1-1
 - Latest upstream
+- Adjust BuildRequire for el8 httpd-devel < 2.4.41
 
 * Mon Dec 23 2019 Matt Linscott <matt.linscott@gmail.com> - 7.4.0-4
 - Fix curltls patch name since it was updated for 7.4.0
