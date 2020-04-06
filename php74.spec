@@ -41,23 +41,22 @@
 %global with_freetds  1
 %global with_sodium   1
 %global with_pspell   1
+%global with_libgd    1
 
 %if 0%{?fedora}
 %global with_zts      1
 %global with_lmdb     1
-%global with_libgd    1
 %global with_libpcre  1
 %else
 %global with_zts      0
 %global with_lmdb     0
-%global with_libgd    0
 %global with_libpcre  0
 %endif
 
 Summary: PHP scripting language for creating dynamic web sites
 Name: php74
 Version: 7.4.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
 # TSRM is licensed under BSD
